@@ -1,0 +1,15 @@
+{
+  "name": "leet",
+  "version": "1.0.0",
+  "description": "JS solutions to leet code problems",
+  "main": "index.js",
+  "repository": "https://github.com/narendrasss/leet",
+  "author": "Narendra Syahrasyad",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "bin": {
+    "alg": "bin/alg.js"
+  }
+}
