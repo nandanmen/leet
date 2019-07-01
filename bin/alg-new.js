@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const map = require('./map')
 const { root, checkIfProblemExists, getFirstEmptyIndex } = require('./util')
 
 function makeFiles(name, rootFilePath) {
@@ -18,19 +19,20 @@ function makeFiles(name, rootFilePath) {
 function newAlg({ name, number }) {
   const algNumber = number || getFirstEmptyIndex()
 
-  let folderNumber = String(algNumber)
-  if (folderNumber.length < 3) {
-    folderNumber = folderNumber.padStart(3, '0')
-  }
-
-  const problemExists = checkIfProblemExists(folderNumber)
+  const problemExists = checkIfProblemExists(name, algNumber)
   if (problemExists) {
     return console.error(
       'A problem with that number already exists. Please provide a different number or leave out the --number option.'
     )
   }
 
+  let folderNumber = String(algNumber)
+  if (folderNumber.length < 3) {
+    folderNumber = folderNumber.padStart(3, '0')
+  }
+
   makeFiles(name, path.join(root, folderNumber))
+  map.set(algNumber, name)
 }
 
 module.exports = newAlg

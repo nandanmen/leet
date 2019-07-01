@@ -1,12 +1,12 @@
 const fs = require('fs')
+const map = require('./map')
 
 const root = 'src'
 
 exports.root = root
 
-exports.checkIfProblemExists = number => {
-  const problems = fs.readdirSync(root)
-  return problems.includes(number)
+exports.checkIfProblemExists = (name, number) => {
+  return map.has(name) || map.has(number)
 }
 
 exports.getFirstEmptyIndex = () => {

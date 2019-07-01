@@ -1,4 +1,4 @@
-function Node(val) {
+export function Node(val) {
   this.val = val
   this.next = null
 }
@@ -16,10 +16,7 @@ function Node(val) {
  * @param l2 {Node} The head of the second linked list
  * @returns {Node}
  */
-function addTwoNumbers(l1, l2) {
-  console.log('add two numbers!')
-  return new Node()
+export default function addTwoNumbers(l1, l2) {
+  console.log('add two numbers!', arguments)
+  return l1
 }
-
-exports.addTwoNumbers = addTwoNumbers
-exports.Node = Node

@@ -1,0 +1,14 @@
+{
+  "numberToName": {
+    "1": "two-sum",
+    "2": "add-two-numbers",
+    "3": "longest-substring",
+    "4": "median-sorted-arrays"
+  },
+  "nameToNumber": {
+    "two-sum": 1,
+    "add-two-numbers": 2,
+    "longest-substring": 3,
+    "median-sorted-arrays": 4
+  }
+}

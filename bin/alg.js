@@ -10,9 +10,13 @@ require('yargs')
     'run <name|number> [input...]',
     'runs the given algorithm',
     yargs =>
-      yargs.positional('name', {
-        desc: 'name|number of the algorithm you want to run'
-      }),
+      yargs
+        .positional('name', {
+          desc: 'name|number of the algorithm you want to run'
+        })
+        .positional('input', {
+          desc: 'input passed to the algorithm'
+        }),
     runAlg
   )
   .command(

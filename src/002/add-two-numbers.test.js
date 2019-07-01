@@ -1,4 +1,4 @@
-const { addTwoNumbers, Node } = require('.')
+import addTwoNumbers, { Node } from '.'
 
 function listFromArray(...values) {
   let curr = null
@@ -29,6 +29,7 @@ function print(node) {
 describe('add two numbers', () => {
   it('adds two numbers of same number of digits', () => {
     const l1 = listFromArray(2, 3, 4)
-    console.log(print(l1))
+    const l2 = listFromArray(5, 6, 4)
+    expect(print(addTwoNumbers(l1, l2))).toEqual(`7 -> 0 -> 8`)
   })
 })
