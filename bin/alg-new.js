@@ -6,7 +6,7 @@ function makeFiles(name, rootFilePath) {
   fs.mkdir(rootFilePath, () => {
     const files = ['index.js', `${name}.test.js`]
 
-    files.forEach((file, index) => {
+    files.forEach(file => {
       const pth = path.join(rootFilePath, file)
       fs.writeFile(pth, '', 'utf-8', () => {
         console.log(`Created ${pth}`)

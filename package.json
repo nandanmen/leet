@@ -11,5 +11,6 @@
   },
   "bin": {
     "alg": "bin/alg.js"
-  }
+  },
+  "dependencies": {}
 }
