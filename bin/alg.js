@@ -1,24 +1,10 @@
 #!/usr/bin/env node
 
 const newAlg = require('./alg-new')
-const runAlg = require('./alg-run')
 
 require('yargs')
   .scriptName('alg')
   .usage('$0 <cmd> [args]')
-  .command(
-    'run <name|number> [input...]',
-    'runs the given algorithm',
-    yargs =>
-      yargs
-        .positional('name', {
-          desc: 'name|number of the algorithm you want to run'
-        })
-        .positional('input', {
-          desc: 'input passed to the algorithm'
-        }),
-    runAlg
-  )
   .command(
     'new <name>',
     'creates new alg folder with given name',

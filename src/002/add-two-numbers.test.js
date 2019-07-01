@@ -28,8 +28,20 @@ function print(node) {
 
 describe('add two numbers', () => {
   it('adds two numbers of same number of digits', () => {
-    const l1 = listFromArray(2, 3, 4)
+    const l1 = listFromArray(2, 4, 3)
     const l2 = listFromArray(5, 6, 4)
     expect(print(addTwoNumbers(l1, l2))).toEqual(`7 -> 0 -> 8`)
+  })
+
+  it('adds two numbers of different number of digits', () => {
+    const l1 = listFromArray(2, 4, 3)
+    const l2 = listFromArray(5, 6, 4, 2, 1)
+    expect(print(addTwoNumbers(l1, l2))).toEqual(`7 -> 0 -> 8 -> 2 -> 1`)
+  })
+
+  it('adds two numbers of same number of digits with carry at end', () => {
+    const l1 = listFromArray(2, 4, 5)
+    const l2 = listFromArray(5, 6, 4)
+    expect(print(addTwoNumbers(l1, l2))).toEqual(`7 -> 0 -> 0 -> 1`)
   })
 })

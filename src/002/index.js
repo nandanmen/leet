@@ -17,6 +17,31 @@ export function Node(val) {
  * @returns {Node}
  */
 export default function addTwoNumbers(l1, l2) {
-  console.log('add two numbers!', arguments)
-  return l1
+  let currFirst = l1
+  let currSecond = l2
+  let carry = 0
+
+  let resultHead
+  let resultCurr
+
+  while (currFirst || currSecond) {
+    const firstData = currFirst ? currFirst.val : 0
+    const secondData = currSecond ? currSecond.val : 0
+    const sum = firstData + secondData + carry
+    carry = sum > 9 ? 1 : 0
+
+    const node = new Node(sum % 10)
+    if (!resultHead) resultHead = node
+    if (resultCurr) resultCurr.next = node
+    resultCurr = node
+
+    currFirst = currFirst ? currFirst.next : null
+    currSecond = currSecond ? currSecond.next : null
+  }
+
+  if (carry) {
+    resultCurr.next = new Node(1)
+  }
+
+  return resultHead
 }
