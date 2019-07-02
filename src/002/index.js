@@ -16,8 +16,10 @@ export function Node(val) {
  * @param l2 {Node} The head of the second linked list
  * @returns {Node} The head of the new list
  * @summary
- *  - Runtime: 112ms (84.55th percentile)
- *  - Memory: 39.1mb (18.63rd percentile)
+ *  - Runtime: O(max(n, m))
+ *  - Leetcode stats:
+ *    - Runtime: 112ms (84.55th percentile)
+ *    - Memory: 39.1mb (18.63rd percentile)
  */
 export default function addTwoNumbers(l1, l2) {
   let currFirst = l1

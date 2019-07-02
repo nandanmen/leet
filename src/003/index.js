@@ -4,8 +4,10 @@
  * @param {string} s
  * @returns {number}
  * @summary
- *  - Runtime: 292ms (26.03rd percentile)
- *  - Memory: 41.7mb (36.26th percentile)
+ *  - Runtime: O(n^2)
+ *  - Leetcode stats:
+ *    - Runtime: 292ms (26.03rd percentile)
+ *    - Memory: 41.7mb (36.26th percentile)
  */
 export default function lengthOfLongestSubstring(s) {
   let max = 0
