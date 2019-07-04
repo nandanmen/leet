@@ -2,6 +2,7 @@ import lengthOfLongestSubstring from '.'
 
 const cases = [
   ['abcabcbb', 3],
+  ['dvdf', 3],
   ['bbbbb', 1],
   ['pwwkew', 3],
   ['ab', 2],
