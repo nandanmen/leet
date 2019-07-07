@@ -5,7 +5,7 @@ const { root, checkIfProblemExists, getFirstEmptyIndex } = require('./util')
 
 function makeFiles(name, rootFilePath) {
   fs.mkdir(rootFilePath, () => {
-    const files = ['index.js', `${name}.test.js`]
+    const files = ['index.ts', `${name}.test.ts`]
 
     files.forEach(file => {
       const pth = path.join(rootFilePath, file)

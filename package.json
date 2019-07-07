@@ -7,11 +7,10 @@
   "author": "Narendra Syahrasyad <n.syahrasyad.n@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "babel-jest": "^24.8.0",
-    "jest": "^24.8.0"
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.5.2"
   },
   "files": [
     "dist"
@@ -21,7 +20,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "rm -rf dist && babel src -d dist --ignore src/**/*.spec.js,src/**/*.test.js"
+    "build": "rm -rf dist && tsc"
   },
   "dependencies": {}
 }

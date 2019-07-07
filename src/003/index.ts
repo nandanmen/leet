@@ -1,15 +1,13 @@
 /**
  * Given a string, returns the length of the longest substring
  * without repeating characters.
- * @param {string} s
- * @returns {number}
  * @summary
  *  - Runtime: O(n^2)
  *  - Leetcode stats:
  *    - Runtime: 292ms (26.03rd percentile)
  *    - Memory: 41.7mb (36.26th percentile)
  */
-export function lengthOfLongestSubstringNonOptimal(s) {
+export function lengthOfLongestSubstringNonOptimal(s: string): number {
   let max = 0
   for (let i = 0; i < s.length; i++) {
     let counter = 0
@@ -33,15 +31,13 @@ export function lengthOfLongestSubstringNonOptimal(s) {
 /**
  * Given a string, returns the length of the longest substring
  * without repeating characters.
- * @param {string} s
- * @returns {number}
  * @summary
  *  - Runtime: O(n)
  *  - Leetcode stats:
  *    - Runtime: 88ms (87.61st percentile)
  *    - Memory: 38.4mb (83.52nd percentile)
  */
-export default function lengthOfLongestSubstring(s) {
+export default function lengthOfLongestSubstring(s: string): number {
   const seen = new Set()
   let max = 0
   let j = 0

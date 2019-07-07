@@ -1,10 +1,10 @@
-import addTwoNumbers, { Node } from '.'
+import addTwoNumbers, { ListNode } from '.'
 
-function listFromArray(...values) {
+function listFromArray(...values: number[]): ListNode<number> {
   let curr = null
   let head = null
   values.forEach(val => {
-    const node = new Node(val)
+    const node = new ListNode(val)
     if (!head) {
       head = node
     }
@@ -16,7 +16,7 @@ function listFromArray(...values) {
   return head
 }
 
-function print(node) {
+function print(node: ListNode<number>): string {
   const result = []
   let curr = node
   while (curr) {

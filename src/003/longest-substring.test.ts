@@ -1,6 +1,6 @@
 import lengthOfLongestSubstring from '.'
 
-const cases = [
+const cases: [string, number][] = [
   ['abcabcbb', 3],
   ['dvdf', 3],
   ['bbbbb', 1],
