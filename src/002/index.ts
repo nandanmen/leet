@@ -21,10 +21,10 @@ export class ListNode<T> {
  *  l2 = 5 -> 6 -> 4
  *  addTwoNumbers(l1, l2) == 7 -> 0 -> 8
  * @summary
- *  - Runtime: O(max(n, m))
+ *  - Runtime: `O(max(n, m))`
  *  - Leetcode stats:
- *    - Runtime: 112ms (84.55th percentile)
- *    - Memory: 39.1mb (18.63rd percentile)
+ *    - Runtime: `112ms` (84.55th percentile)
+ *    - Memory: `39.1mb` (18.63rd percentile)
  */
 export default function addTwoNumbers(
   l1: ListNode<number>,
