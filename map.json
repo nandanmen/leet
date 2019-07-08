@@ -2,11 +2,13 @@
   "numberToName": {
     "2": "add-two-numbers",
     "3": "longest-substring",
+    "4": "median-sorted-arrays",
     "10": "regex-matching"
   },
   "nameToNumber": {
     "add-two-numbers": 2,
     "longest-substring": 3,
-    "regex-matching": 10
+    "regex-matching": 10,
+    "median-sorted-arrays": 4
   }
 }
