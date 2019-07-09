@@ -4,13 +4,19 @@
     "3": "longest-substring",
     "4": "median-sorted-arrays",
     "5": "longest-palindromic-substring",
-    "10": "regex-matching"
+    "10": "regex-matching",
+    "11": "container-with-most-water",
+    "15": "three-sum",
+    "17": "phone-combinations"
   },
   "nameToNumber": {
     "add-two-numbers": 2,
     "longest-substring": 3,
     "regex-matching": 10,
     "median-sorted-arrays": 4,
-    "longest-palindromic-substring": 5
+    "longest-palindromic-substring": 5,
+    "container-with-most-water": 11,
+    "three-sum": 15,
+    "phone-combinations": 17
   }
 }

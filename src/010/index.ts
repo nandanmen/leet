@@ -6,7 +6,14 @@
  * (not partial).
  */
 function isMatch(s: string, p: string): boolean {
-  return false
+  if (s.length !== p.length) return false
+
+  let i = 0,
+    j = 0
+  while (i < s.length && j < p.length) {
+    if (s[i++] !== p[j++]) return false
+  }
+  return true
 }
 
 export default isMatch

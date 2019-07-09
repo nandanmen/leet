@@ -1,9 +1,9 @@
-const path = require('path')
-const fs = require('fs')
-const map = require('./map')
-const { root, checkIfProblemExists, getFirstEmptyIndex } = require('./util')
+import * as path from 'path'
+import * as fs from 'fs'
+import map from './map'
+import { root, checkIfProblemExists, getFirstEmptyIndex } from './util'
 
-function makeFiles(name, rootFilePath) {
+function makeFiles(name: string, rootFilePath: string) {
   fs.mkdir(rootFilePath, () => {
     const files = ['index.ts', `${name}.test.ts`]
 
@@ -16,7 +16,12 @@ function makeFiles(name, rootFilePath) {
   })
 }
 
-function newAlg({ name, number }) {
+type NewAlgArgs = {
+  name: string
+  number?: number
+}
+
+function newAlg({ name, number }: NewAlgArgs) {
   const algNumber = number || getFirstEmptyIndex()
 
   const problemExists = checkIfProblemExists(name, algNumber)
@@ -32,7 +37,7 @@ function newAlg({ name, number }) {
   }
 
   makeFiles(name, path.join(root, folderNumber))
-  map.set(algNumber, name)
+  map.set(algNumber, name).write()
 }
 
-module.exports = newAlg
+export default newAlg

@@ -1,6 +1,12 @@
 import isMatch from '.'
 
 const cases: [string, string, boolean][] = [
+  ['', '', true],
+  ['ab', 'ab*', true],
+  ['ab', 'ab.', false],
+  ['ab', 'ab.*', true],
+  ['aaaabc', 'a*bc', true],
+  ['bc', 'a*bc', true],
   ['aa', 'a', false],
   ['aa', 'a*', true],
   ['ab', '.*', true],
