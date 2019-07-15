@@ -14,15 +14,23 @@ struct ListNode
  *     ListNode *next;
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
+ * 
  */
 class Solution
 {
 public:
+  /**
+   * Runtime: O(2n) (two passes)
+   * Leetcode:
+   *  - Runtime: 4ms (90.50%)
+   *  - Memory: 8.6mb (29.34%)
+   */
   ListNode *removeNthFromEnd(ListNode *head, int n)
   {
     int length = size(head);
     int nodeIndex = length - n;
 
+    // if node index = 0, remove head
     if (nodeIndex == 0)
     {
       ListNode *tmp = head->next;
