@@ -7,7 +7,8 @@
     "10": "regex-matching",
     "11": "container-with-most-water",
     "15": "three-sum",
-    "17": "phone-combinations"
+    "17": "phone-combinations",
+    "19": "remove-nth-node"
   },
   "nameToNumber": {
     "add-two-numbers": 2,
@@ -17,6 +18,7 @@
     "longest-palindromic-substring": 5,
     "container-with-most-water": 11,
     "three-sum": 15,
-    "phone-combinations": 17
+    "phone-combinations": 17,
+    "remove-nth-node": 19
   }
 }

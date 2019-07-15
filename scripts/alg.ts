@@ -1,4 +1,5 @@
 import newAlg from './alg-new'
+import runAlg from './alg-run'
 import * as yargs from 'yargs'
 
 type NewOptions = {
@@ -17,17 +18,18 @@ const argv = yargs
       alias: 'n'
     }
   })
-  .command<RunOptions>('run <name|number>', 'runs a given algorithm', {
+  /* .command<RunOptions>('run <name|number>', 'runs a given algorithm', {
     input: {
       describe: 'input to the algorithm',
       demand: true,
       alias: 'i'
     }
-  })
+  }) */
   .help().argv
 
 const commands = {
-  new: newAlg
+  new: newAlg,
+  run: runAlg
 }
 
 const executeCommand = commands[argv._[0]]
